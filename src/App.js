@@ -1,23 +1,23 @@
-import React, { useEffect } from "react";
-import { Button, Container } from "@mui/material";
-import { ThemeProvider } from "@emotion/react";
-import theme from "./styles/theme";
-import Appbar from "./components/appbar"
+import React, { useEffect } from 'react'
+import { Button, Container } from '@mui/material'
+import { ThemeProvider } from '@emotion/react'
+import theme from './styles/theme'
+import Appbar from './components/appbar'
 
 function App() {
   useEffect(() => {
-    document.title = "React material Ui - Home";
-  }, []);
+    document.title = 'React material Ui - Home'
+  }, [])
 
   return (
     <ThemeProvider theme={theme}>
       <Container
         maxWidth="xl"
         sx={{
-          background: "#fff",
+          background: '#fff',
         }}
       >
-        <Appbar/>
+        <Appbar />
         {/*
           Banner,  
           Promotions, 
@@ -30,7 +30,7 @@ function App() {
         <Button variant="contained">Test</Button>
       </Container>
     </ThemeProvider>
-  );
+  )
 }
 
-export default App;
+export default App

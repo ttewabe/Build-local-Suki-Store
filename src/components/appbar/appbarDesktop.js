@@ -1,7 +1,7 @@
-import { AppbarContainer, AppbarHeader, MyList } from "../../styles/appbar";
-import { ListItemButton, ListItemIcon, ListItemText } from "@mui/material";
-import SearchIcon from "@mui/icons-material/Search";
-import Actions from "./actions";
+import { AppbarContainer, AppbarHeader, MyList } from '../../styles/appbar'
+import { ListItemButton, ListItemIcon, ListItemText } from '@mui/material'
+import SearchIcon from '@mui/icons-material/Search'
+import Actions from './actions'
 
 export default function AppbarDesktop({ matches }) {
   return (
@@ -21,7 +21,5 @@ export default function AppbarDesktop({ matches }) {
       </MyList>
       <Actions matches={matches} />
     </AppbarContainer>
-  );
+  )
 }
-
-
