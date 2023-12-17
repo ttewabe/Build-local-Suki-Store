@@ -1,8 +1,9 @@
 import { AppbarContainer, AppbarHeader, MyList } from "../../styles/appbar";
 import { ListItemButton, ListItemIcon, ListItemText } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
+import Actions from "./actions";
 
-function appbarDesktop({ matches }) {
+export default function AppbarDesktop({ matches }) {
   return (
     <AppbarContainer>
       <AppbarHeader>My Suki</AppbarHeader>
@@ -18,8 +19,9 @@ function appbarDesktop({ matches }) {
           </ListItemIcon>
         </ListItemButton>
       </MyList>
+      <Actions matches={matches} />
     </AppbarContainer>
   );
 }
 
-export default appbarDesktop;
+

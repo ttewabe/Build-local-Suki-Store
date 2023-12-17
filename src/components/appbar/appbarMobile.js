@@ -1,8 +1,6 @@
-
-import React from 'react'
 import { AppbarContainer, AppbarHeader } from '../../styles/appbar'
 
-const appbarMobile = ({matches}) => {
+function AppbarMobile({matches}){
 
   return (
     (
@@ -13,4 +11,4 @@ const appbarMobile = ({matches}) => {
   )
 }
 
-export default appbarMobile
+export default AppbarMobile;
