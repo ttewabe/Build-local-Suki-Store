@@ -3,6 +3,8 @@ import { Button, Container } from '@mui/material'
 import { ThemeProvider } from '@emotion/react'
 import theme from './styles/theme'
 import Appbar from './components/appbar'
+import Banner from './components/banner'
+import Promotions from './components/promotions'
 
 function App() {
   useEffect(() => {
@@ -18,16 +20,8 @@ function App() {
         }}
       >
         <Appbar />
-        {/*
-          Banner,  
-          Promotions, 
-          title, 
-          Products, 
-          footer, 
-          Searchbox, 
-          appdrawer
-        */}
-        <Button variant="contained">Test</Button>
+        <Banner /> 
+        <Promotions /> 
       </Container>
     </ThemeProvider>
   )
