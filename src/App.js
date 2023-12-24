@@ -5,7 +5,8 @@ import theme from './styles/theme'
 import Appbar from './components/appbar'
 import Banner from './components/banner'
 import Promotions from './components/promotions'
-import Products from './components/products'
+import Products from './components/products';
+import Footer from './components/footer';
 
 function App() {
   useEffect(() => {
@@ -27,6 +28,7 @@ function App() {
           <Typography variant="4"><h1>OUR PRODUCTS</h1></Typography>
         </Box>
         <Products /> 
+        <Footer/>
       </Container>
     </ThemeProvider>
   )
