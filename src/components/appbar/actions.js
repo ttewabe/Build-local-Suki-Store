@@ -49,7 +49,7 @@ export default function Actions({ matches }) {
             <FavoriteIcon />
           </ListItemIcon>
         </ListItemButton>
-        <Divider orientation="vertical" flexItem />
+        <Divider orientation="vertical" flexItem style={{ backgroundColor: Colors.secondary}} />
 
         <ListItemButton
           sx={{
@@ -66,7 +66,7 @@ export default function Actions({ matches }) {
             <PersonIcon />
           </ListItemIcon>
         </ListItemButton>
-        <Divider orientation="vertical" flexItem />
+        <Divider orientation="vertical" flexItem style={{ backgroundColor: Colors.secondary, width: '0.3px'}} />
       </MyList>
     </Component>
   )
