@@ -1,5 +1,7 @@
-import { createTheme } from '@mui/material/styles';
-import { lighten } from "polished";
+import { createTheme } from '@mui/material/styles'
+import { lighten } from 'polished'
+
+export const DrawerWidth = 250
 
 export const Colors = {
   primary: '#5f2c3e',
@@ -14,10 +16,14 @@ export const Colors = {
   border: '#DDDFE1',
   inverse: '#2F3D4A',
   shaft: '#333',
+
+  // Grays
   dim_grey: '#696969',
   dove_gray: '#d5d5d5',
   body_bg: '#f3f6f9',
   light_gray: 'rgb(230,230,230)',
+
+  // Solid Color
   white: '#fff',
   black: '#000',
 }
@@ -30,10 +36,8 @@ const theme = createTheme({
     secondary: {
       main: Colors.secondary,
     },
-    tertiary: {
-      main: Colors.tertiary,  
   },
-  },
+
   components: {
     MuiButton: {
       defaultProps: {
@@ -41,40 +45,51 @@ const theme = createTheme({
         disableElevation: true,
       },
     },
+    MuiTooltip: {
+      defaultProps: {
+        arrow: true,
+      },
+      styleOverrides: {
+        tooltip: {
+          background: Colors.primary,
+        },
+        arrow: {
+          color: Colors.primary,
+        },
+      },
+    },
     MuiDrawer: {
       styleOverrides: {
         paper: {
-          width: 250,
-          background:Colors.primary,
-          color:Colors.secondary,
+          width: DrawerWidth,
+          background: Colors.primary,
+          color: Colors.secondary,
           borderRadius: '0px 100px 0px 0px',
-          borderRight:`10px solid ${Colors.secondary}`
+          borderRight: `1px solid ${Colors.primary}`,
         },
       },
     },
     MuiDivider: {
       styleOverrides: {
         root: {
-          borderColor:lighten(0.2, Colors.secondary)
-        }
-      }
+          borderColor: lighten(0.2, Colors.primary),
+        },
+      },
     },
-
-    MyCustomShopButton: {
+    MyShopButton: {
       styleOverrides: {
         root: {
           color: Colors.white,
         },
         primary: {
           background: Colors.primary,
-          "&:hover": {
-            background: lighten(0.05, Colors.secondary),
-            color: Colors.black,
+          '&:hover': {
+            background: lighten(0.05, Colors.primary),
           },
         },
         secondary: {
           background: `${Colors.secondary}`,
-          "&:hover": {
+          '&:hover': {
             background: lighten(0.05, Colors.primary),
           },
         },

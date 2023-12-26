@@ -1,29 +1,27 @@
-import { AppbarContainer, AppbarHeader } from '../../styles/appbar'
-import MenuIcon from '@mui/icons-material/Menu'
-import SearchIcon from '@mui/icons-material/Search'
-import Actions from './actions'
-import { IconButton } from '@mui/material'
-import { useUIContext } from '../../context/ui'
+import { IconButton } from '@mui/material';
+import { useUIContext } from '../../context/ui';
+import { AppbarContainer, AppbarHeader } from '../../styles/appbar';
+import MenuIcon from '@mui/icons-material/Menu';
+import SearchIcon from '@mui/icons-material/Search';
+import Actions from './actions';
 
 
-function AppbarMobile({ matches }) {
 
-  const {setDrawerOpen} = useUIContext();
+export default function AppbarMobile({ matches }) {
+  const { setDrawerOpen, setShowSearchBox} = useUIContext();
 
   return (
-    <AppbarContainer>
-      <IconButton onClick={()=>setDrawerOpen(true)}>
+    <AppbarContainer >
+      <IconButton onClick={() => setDrawerOpen(true)}>
         <MenuIcon />
       </IconButton>
-      <AppbarHeader textAlign={'center'} variant="h4">
+      <AppbarHeader textAlign={"center"} variant="h4">
         My Suki
       </AppbarHeader>
-      <IconButton>
+      <IconButton onClick={()=> setShowSearchBox(true) }>
         <SearchIcon />
       </IconButton>
       <Actions matches={matches} />
     </AppbarContainer>
-  )
+  );
 }
-
-export default AppbarMobile

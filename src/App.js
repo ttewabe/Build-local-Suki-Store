@@ -1,14 +1,15 @@
-import React, { useEffect } from 'react'
-import { Container, Typography, Box } from '@mui/material'
-import { ThemeProvider } from '@emotion/react'
-import theme from './styles/theme'
-import Appbar from './components/appbar'
-import Banner from './components/banner'
-import Promotions from './components/promotions'
-import Products from './components/products'
-import Footer from './components/footer'
-import AppDrawer from './components/drawer'
-import { UIProvider } from './context/ui'
+import { useEffect } from 'react'
+import { Container, Typography, Box, Stack } from "@mui/material";
+import Appbar from "./components/appbar";
+import { ThemeProvider } from "@mui/system";
+import theme from "./styles/theme";
+import Banner from "./components/banner";
+import Products from "./components/products";
+import { UIProvider } from "./context/ui";
+import Footer from "./components/footer";
+import AppDrawer from "./components/drawer";
+import Promotions from "./components/promotions";
+import SearchBox from "./components/search";
 
 function App() {
   useEffect(() => {
@@ -18,27 +19,28 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Container
+        disableGutters
         maxWidth="xl"
         sx={{
-          background: '#fff',
+          background: "#fff",
         }}
       >
-        <UIProvider>
-          <Appbar />
-          <Banner />
-          <Promotions />
-          <Box display="flex" justifyContent="center" sx={{ pt: 4 }}>
-            <Typography variant="4">
-              <h1>OUR PRODUCTS</h1>
-            </Typography>
-          </Box>
-          <Products />
-          <Footer />
-          <AppDrawer />
-        </UIProvider>
+        <Stack>
+          <UIProvider>
+            <Appbar />
+            <Banner />
+            <Promotions />
+            <SearchBox />
+            <Box display="flex" justifyContent="center" sx={{ p: 4 }}>
+              <Typography variant="h4">Our Products</Typography>
+            </Box>
+            <Products />
+            <Footer />
+            <AppDrawer />
+          </UIProvider>
+        </Stack>
       </Container>
     </ThemeProvider>
-  )
+  );
 }
-
 export default App
