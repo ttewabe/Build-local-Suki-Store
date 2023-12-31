@@ -32,7 +32,8 @@ export const ProductActionButton = styled(IconButton)(() => ({
 
 export const ProductFavButton = styled(ProductActionButton,{  shouldForwardProp: (prop) => prop !== 'isFav',
 })(({ isfav, theme }) => ({
-    color: isfav ? Colors.primary : Colors.light,
+    color: isfav ? Colors.danger : Colors.light,
+    
     [theme.breakpoints.up('md')]: {
       position: 'absolute',
       right: 0,

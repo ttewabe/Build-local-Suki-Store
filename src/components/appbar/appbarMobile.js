@@ -16,7 +16,7 @@ export default function AppbarMobile({ matches }) {
         <MenuIcon />
       </IconButton>
       <AppbarHeader textAlign={"center"} variant="h4">
-        My Suki
+        Suki
       </AppbarHeader>
       <IconButton onClick={()=> setShowSearchBox(true) }>
         <SearchIcon />

@@ -2,7 +2,7 @@ import { useTheme } from '@mui/material/styles';
 import { Container, Grid, useMediaQuery } from '@mui/material';
 import { products } from '../../data';
 import SingleProduct from './singleProduct';
-import SingleProductDesktop from "./SingleProductDesktop";
+import SingleProductDesktop from './SingleProductDesktop';
 
 export default function Products() {
   const theme = useTheme();

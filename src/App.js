@@ -13,7 +13,7 @@ import SearchBox from "./components/search";
 
 function App() {
   useEffect(() => {
-    document.title = 'React material Ui - Home'
+    document.title = 'Welcome to Suki'
   }, [])
 
   return (

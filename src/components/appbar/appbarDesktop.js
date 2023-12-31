@@ -9,7 +9,7 @@ export default function AppbarDesktop({ matches }) {
   const { setShowSearchBox } = useUIContext();
   return (
     <AppbarContainer>
-      <AppbarHeader>My Suki</AppbarHeader>
+      <AppbarHeader>Suki</AppbarHeader>
       <MyList type="row">
         <ListItemText primary="Home" />
         <ListItemText primary="Catagories" />

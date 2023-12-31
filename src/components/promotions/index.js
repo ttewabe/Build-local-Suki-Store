@@ -1,7 +1,7 @@
-import { Slide } from '@mui/material'
-import { Box } from '@mui/system'
-import { useEffect, useRef, useState } from 'react'
-import { MessageText, PromotionsContainer } from '../../styles/promotions'
+import { useEffect, useRef, useState } from 'react';
+import { MessageText, PromotionsContainer } from '../../styles/promotions';
+import { Slide } from '@mui/material';
+import { Box } from '@mui/system';
 
 const messages = [
   'Get 30% off your initial purchase!',
@@ -38,15 +38,17 @@ export default function Promotions() {
     <PromotionsContainer ref={containerRef}>
       <Slide 
       container={containerRef.current}
-      direction={show ? 'left' : 'right'} 
+      direction={show ? 'right' : 'left'} 
       in={show}
       timeout={{
-        enter:500,
-        exit:100
+        enter:1000,
+        exit:500
       }}
       >
         <Box display="flex" justifyContent="center" alignItems="center">
-          <MessageText>{messages[messageIndex]}</MessageText>
+          <MessageText>
+            {messages[messageIndex]}
+          </MessageText>
         </Box>
       </Slide>
     </PromotionsContainer>
